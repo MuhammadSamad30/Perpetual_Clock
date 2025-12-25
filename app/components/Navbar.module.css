@@ -1,0 +1,26 @@
+.navbar {
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.7); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the heading */
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 180, 255, 0.7);
+  }
+  
