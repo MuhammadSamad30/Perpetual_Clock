@@ -1,8 +1,8 @@
 "use client"
 import React, { useCallback } from "react";
-import Particles from "react-tsparticles";
+import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import type { Engine } from "tsparticles-engine";
+import type { Engine } from "@tsparticles/engine";
 
 const AnimatedBackground = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -20,15 +20,15 @@ const AnimatedBackground = () => {
                 },
                 particles: {
                     number: {
-                        value: 80, // Increased number of particles
+                        value: 80,
                     },
                     color: {
-                        value: "#00b4ff", // Blue color for particles
+                        value: "#00b4ff",
                     },
                     links: {
                         enable: true,
                         distance: 150,
-                        color: "#00b4ff", // Blue color for links
+                        color: "#00b4ff",
                         opacity: 0.6,
                         width: 1,
                     },
@@ -43,8 +43,6 @@ const AnimatedBackground = () => {
                         },
                         attract: {
                             enable: false,
-                            rotateX: 600,
-                            rotateY: 1200,
                         },
                     },
                     opacity: {

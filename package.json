@@ -9,10 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.9.1"
   },
   "devDependencies": {
