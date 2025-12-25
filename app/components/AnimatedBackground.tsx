@@ -5,14 +5,14 @@ import { loadFull } from "tsparticles";
 import type { Engine } from "@tsparticles/engine";
 
 const AnimatedBackground = () => {
-    const particlesInit = useCallback(async (engine: Engine) => {
+    const particlesInit: (engine: Engine) => Promise<void> = useCallback(async (engine: Engine) => {
         await loadFull(engine);
     }, []);
 
     return (
         <Particles
             id="tsparticles"
-            init={particlesInit}
+            onInit={particlesInit}
             options={{
                 fullScreen: {
                     enable: true,
@@ -36,7 +36,6 @@ const AnimatedBackground = () => {
                         enable: true,
                         speed: 2,
                         direction: "none",
-                        random: false,
                         straight: false,
                         outModes: {
                             default: "bounce",
@@ -47,23 +46,9 @@ const AnimatedBackground = () => {
                     },
                     opacity: {
                         value: 0.5,
-                        random: false,
-                        anim: {
-                            enable: false,
-                            speed: 1,
-                            opacity_min: 0.1,
-                            sync: false,
-                        },
                     },
                     size: {
                         value: 3,
-                        random: true,
-                        anim: {
-                            enable: false,
-                            speed: 40,
-                            size_min: 0.1,
-                            sync: false,
-                        },
                     },
                 },
                 interactivity: {
@@ -103,7 +88,7 @@ const AnimatedBackground = () => {
                     },
                 },
                 background: {
-                    color: "#0a0a0a", // Dark background
+                    color: "#0a0a0a",
                 },
             }}
         />
